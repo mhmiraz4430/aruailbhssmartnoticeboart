@@ -12,7 +12,7 @@
 <body>
   <div class="top-strip">
     <div class="container top-strip-inner">
-      <span>আরুয়াইল বহুমুখী উচ্চ বিদ্যালয়</span>
+      <span>অরুয়াইল বহুমুখী উচ্চ বিদ্যালয়</span>
       <span id="todayDate" aria-live="polite"></span>
     </div>
   </div>
@@ -20,7 +20,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" id="brandLogo" href="#home" aria-label="ARUAIL BHS হোম; অ্যাডমিন প্যানেল খুলতে ডাবল-ক্লিক বা ডাবল-ট্যাপ করুন">
-        <img src="assets/aruail-bhs-school-logo.jpg" alt="আরুয়াইল বহুমুখী উচ্চ বিদ্যালয়ের লোগো">
+        <img src="assets/aruail-bhs-school-logo.jpg" alt="অরুয়াইল বহুমুখী উচ্চ বিদ্যালয়ের লোগো">
         <span class="brand-copy">
           <strong>ARUAIL BHS</strong>
           <small>SMART NOTICE BOARD</small>
@@ -95,7 +95,7 @@
     <section class="school-band" id="about">
       <div class="container school-band-inner">
         <img src="assets/aruail-bhs-school-logo.jpg" alt="" loading="lazy">
-        <div><div class="section-kicker">ARUAIL BHS</div><h2>আরুয়াইল বহুমুখী উচ্চ বিদ্যালয়</h2><p>শিক্ষাই শক্তি, উন্নয়নের পথে। স্কুলের নোটিশ ও গুরুত্বপূর্ণ তথ্যের জন্য এই ডিজিটাল বোর্ডটি ব্যবহার করুন।</p><small>আরুয়াইল গ্রাম, সরাইল থানা, ব্রাহ্মণবাড়িয়া জেলা, বাংলাদেশ</small></div>
+        <div><div class="section-kicker">ARUAIL BHS</div><h2>অরুয়াইল বহুমুখী উচ্চ বিদ্যালয়</h2><p>শিক্ষাই শক্তি, উন্নয়নের পথে। স্কুলের নোটিশ ও গুরুত্বপূর্ণ তথ্যের জন্য এই ডিজিটাল বোর্ডটি ব্যবহার করুন।</p><small>অরুয়াইল গ্রাম, সরাইল থানা, ব্রাহ্মণবাড়িয়া জেলা, বাংলাদেশ</small></div>
         <a class="btn btn-primary" href="https://www.aruailbhs.edu.bd/" target="_blank" rel="noopener noreferrer">স্কুলের ওয়েবসাইট ↗</a>
       </div>
     </section>
@@ -119,7 +119,6 @@
     <div id="adminTools" hidden>
       <div class="demo-warning">আপনি অ্যাডমিন হিসেবে লগইন করেছেন। নোটিশ প্রকাশ করলে তা অনলাইনে সবার জন্য দেখা যাবে।</div>
       <button id="changePassword" class="btn btn-subtle" type="button">পাসওয়ার্ড পরিবর্তন</button>
-      <button id="changeEmail" class="btn btn-subtle" type="button">ইমেইল/ইউজারনেম পরিবর্তন</button>
       <button id="logoutAdmin" class="btn btn-subtle" type="button">লগআউট</button>
     <form id="noticeForm" class="notice-form">
       <input type="hidden" name="editingId" value="">
@@ -127,6 +126,7 @@
       <div class="form-row"><label>বিভাগ<select name="category" required><option value="সাধারণ">সাধারণ</option><option value="পরীক্ষা">পরীক্ষা ও রুটিন</option><option value="ছুটি">ছুটি ও বন্ধ</option><option value="জরুরি">জরুরি ঘোষণা</option></select></label><label>শ্রেণি<select name="className"><option>সকল শ্রেণি</option><option>ষষ্ঠ</option><option>সপ্তম</option><option>অষ্টম</option><option>নবম</option><option>দশম</option></select></label></div>
       <div class="form-row"><label>প্রকাশের তারিখ<input name="date" type="date" required></label><label>মেয়াদ শেষ (ঐচ্ছিক)<input name="expires" type="date"></label></div>
       <label>বিস্তারিত<textarea name="body" rows="5" required maxlength="5000" placeholder="নোটিশের বিস্তারিত লিখুন..."></textarea></label>
+      <label>নোটিশের ছবি (ঐচ্ছিক)<input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label><small class="upload-help">JPG, PNG বা WebP ছবি; সর্বোচ্চ ৫ MB। ছবিটি নোটিশের সঙ্গে সবার জন্য দেখা যাবে।</small>
       <label>PDF ফাইল (ঐচ্ছিক)<input name="pdf" type="file" accept="application/pdf"></label>
       <label class="checkbox-label"><input name="important" type="checkbox"> এটিকে গুরুত্বপূর্ণ নোটিশ হিসেবে দেখান</label>
       <div class="form-row"><button class="btn btn-primary form-submit" id="saveNoticeBtn" type="submit">নোটিশ প্রকাশ করুন</button><button class="btn btn-subtle" id="cancelEdit" type="button" hidden>এডিট বাতিল</button></div>
