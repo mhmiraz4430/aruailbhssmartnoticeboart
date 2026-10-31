@@ -1,0 +1,15 @@
+প্রকাশের আগে চেকলিস্ট
+[ ] Supabase Project URL config.js-এর URL-এর সঙ্গে মেলে
+[ ] config.js-এ সঠিক anon/public বা publishable key আছে (service_role key নয়)
+[ ] supabase-setup.sql সম্পূর্ণভাবে সফল হয়েছে
+[ ] Supabase Auth-এ প্রথম অ্যাডমিন user তৈরি হয়েছে
+[ ] school_admins টেবিলে ওই user-এর UUID যুক্ত হয়েছে
+[ ] Public sign-up বন্ধ (যদি প্রয়োজন না থাকে)
+[ ] GitHub Pages-এ index.html, config.js, script.js, style.css ও assets প্রকাশিত
+[ ] লোগোতে ডাবল-ক্লিক/ডাবল-ট্যাপে অ্যাডমিন লগইন খুলছে
+[ ] অ্যাডমিন লগইন সফল হচ্ছে
+[ ] নোটিশ যোগ, এডিট, মুছে ফেলা এবং PDF আপলোড পরীক্ষা হয়েছে
+[ ] লগইন ছাড়া নোটিশ পরিবর্তন করা যাচ্ছে না
+[ ] ইনকগনিটো/অন্য ডিভাইসে প্রকাশিত নোটিশ দেখা যাচ্ছে
+[ ] পাসওয়ার্ড পরিবর্তন ও ইমেইল পরিবর্তন পরীক্ষা হয়েছে
+[ ] কোনো service_role key, password বা private student data GitHub-এ নেই

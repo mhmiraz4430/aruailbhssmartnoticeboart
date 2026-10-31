@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b8a">
+  <meta name="description" content="ARUAIL BHS Smart Notice Board — স্কুলের সর্বশেষ নোটিশ, পরীক্ষা, রুটিন ও ছুটির ঘোষণা।">
+  <title>ARUAIL BHS | Smart Notice Board</title>
+  <link rel="icon" type="image/jpeg" href="assets/aruail-bhs-school-logo.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <span>আরুয়াইল বহুমুখী উচ্চ বিদ্যালয়</span>
+      <span id="todayDate" aria-live="polite"></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" id="brandLogo" href="#home" aria-label="ARUAIL BHS হোম; অ্যাডমিন প্যানেল খুলতে ডাবল-ক্লিক বা ডাবল-ট্যাপ করুন">
+        <img src="assets/aruail-bhs-school-logo.jpg" alt="আরুয়াইল বহুমুখী উচ্চ বিদ্যালয়ের লোগো">
+        <span class="brand-copy">
+          <strong>ARUAIL BHS</strong>
+          <small>SMART NOTICE BOARD</small>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন" aria-expanded="false">☰</button>
+      <nav class="nav" id="mainNav">
+        <a class="active" href="#home">হোম</a>
+        <a href="#notices">সকল নোটিশ</a>
+        <a href="#categories">বিভাগ</a>
+        <a href="#about">স্কুল সম্পর্কে</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> OFFICIAL DIGITAL NOTICE BOARD</div>
+          <h1>স্কুলের সকল নোটিশ,<br><span>এখন এক জায়গায়।</span></h1>
+          <p>পরীক্ষা, ক্লাস রুটিন, ছুটি ও জরুরি ঘোষণা—প্রয়োজনীয় তথ্য খুঁজুন সহজেই।</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="#notices">সর্বশেষ নোটিশ দেখুন <span>↓</span></a>
+            <a class="btn btn-outline" href="#categories">বিভাগসমূহ</a>
+          </div>
+          <div class="hero-meta"><span>✓ সহজে ব্যবহারযোগ্য</span><span>✓ মোবাইল-ফ্রেন্ডলি</span><span>✓ দ্রুত নোটিশ খোঁজা</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-head"><div class="bell-icon">♧</div><div><b>Notice Updates</b><small>নোটিশ আপডেট</small></div><span class="status-pill">LIVE BOARD</span></div>
+          <div class="hero-card-main">
+            <div class="mini-stat"><span class="stat-icon blue">▤</span><div><small>মোট নোটিশ</small><strong id="heroTotal">০৬</strong></div></div>
+            <div class="mini-stat"><span class="stat-icon green">✦</span><div><small>গুরুত্বপূর্ণ</small><strong id="heroImportant">০২</strong></div></div>
+            <div class="mini-stat"><span class="stat-icon orange">◷</span><div><small>সর্বশেষ আপডেট</small><strong id="heroUpdated">আজ</strong></div></div>
+          </div>
+          <div class="hero-card-footer"><span class="pulse"></span> তথ্য জানতে নিয়মিত এই পেজটি দেখুন</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container quick-bar" aria-label="দ্রুত খোঁজ">
+      <div class="quick-title"><span class="search-symbol">⌕</span><div><b>নোটিশ খুঁজুন</b><small>শিরোনাম বা বিষয় লিখুন</small></div></div>
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="যেমন: পরীক্ষার রুটিন, ছুটি..." aria-label="নোটিশ খুঁজুন"><button id="clearSearch" type="button" aria-label="সার্চ মুছুন">×</button></label>
+      <select id="classFilter" aria-label="শ্রেণি অনুযায়ী ফিল্টার"><option value="">সব শ্রেণি</option><option>ষষ্ঠ</option><option>সপ্তম</option><option>অষ্টম</option><option>নবম</option><option>দশম</option><option>সকল শ্রেণি</option></select>
+    </section>
+
+    <section class="section container" id="notices">
+      <div class="section-heading">
+        <div><div class="section-kicker">NOTICE CENTER</div><h2>সর্বশেষ নোটিশ</h2><p>স্কুলের গুরুত্বপূর্ণ ঘোষণা ও আপডেট</p></div>
+        <div class="heading-actions"><span class="result-count" id="resultCount">৬টি নোটিশ</span><select id="sortSelect" aria-label="নোটিশ সাজান"><option value="newest">নতুন আগে</option><option value="oldest">পুরোনো আগে</option></select></div>
+      </div>
+      <div class="featured-notice" id="featuredNotice"></div>
+      <div class="notice-grid" id="noticeGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><div>⌕</div><h3>কোনো নোটিশ পাওয়া যায়নি</h3><p>অন্য শব্দ দিয়ে খুঁজে দেখুন অথবা ফিল্টার পরিবর্তন করুন।</p><button class="btn btn-primary" id="resetFilters">সব নোটিশ দেখুন</button></div>
+    </section>
+
+    <section class="category-section" id="categories">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-kicker">BROWSE BY CATEGORY</div><h2>নোটিশের বিভাগ</h2><p>আপনার প্রয়োজন অনুযায়ী নোটিশ দেখুন</p></div>
+        </div>
+        <div class="category-grid">
+          <button class="category-card" data-category="পরীক্ষা"><span class="category-icon exam">▤</span><span><b>পরীক্ষা ও রুটিন</b><small>পরীক্ষার তারিখ, সময় ও নির্দেশনা</small></span><span class="category-arrow">↗</span></button>
+          <button class="category-card" data-category="ছুটি"><span class="category-icon holiday">☼</span><span><b>ছুটি ও বন্ধ</b><small>ছুটির তালিকা ও স্কুল বন্ধের খবর</small></span><span class="category-arrow">↗</span></button>
+          <button class="category-card" data-category="সাধারণ"><span class="category-icon general">▣</span><span><b>সাধারণ নোটিশ</b><small>স্কুলের সাধারণ ঘোষণা</small></span><span class="category-arrow">↗</span></button>
+          <button class="category-card" data-category="জরুরি"><span class="category-icon urgent">⚑</span><span><b>জরুরি ঘোষণা</b><small>গুরুত্বপূর্ণ ও জরুরি আপডেট</small></span><span class="category-arrow">↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="school-band" id="about">
+      <div class="container school-band-inner">
+        <img src="assets/aruail-bhs-school-logo.jpg" alt="" loading="lazy">
+        <div><div class="section-kicker">ARUAIL BHS</div><h2>আরুয়াইল বহুমুখী উচ্চ বিদ্যালয়</h2><p>শিক্ষাই শক্তি, উন্নয়নের পথে। স্কুলের নোটিশ ও গুরুত্বপূর্ণ তথ্যের জন্য এই ডিজিটাল বোর্ডটি ব্যবহার করুন।</p><small>আরুয়াইল গ্রাম, সরাইল থানা, ব্রাহ্মণবাড়িয়া জেলা, বাংলাদেশ</small></div>
+        <a class="btn btn-primary" href="https://www.aruailbhs.edu.bd/" target="_blank" rel="noopener noreferrer">স্কুলের ওয়েবসাইট ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><div class="footer-brand"><img src="assets/aruail-bhs-school-logo.jpg" alt=""><span><b>ARUAIL BHS</b><small>SMART NOTICE BOARD</small></span></div><p>সঠিক তথ্য, সহজে সবার কাছে।</p><span class="copyright">© <span id="year"></span> ARUAIL BHS</span></div>
+    <div class="container demo-note">শিক্ষার্থীদের জন্য তথ্য বোর্ড। প্রকাশের আগে বিদ্যালয় কর্তৃপক্ষের অনুমোদিত নোটিশ যাচাই করুন।</div>
+  </footer>
+
+  <dialog id="noticeDialog" class="notice-dialog"><button class="dialog-close" data-close="noticeDialog" aria-label="বন্ধ করুন">×</button><div id="noticeDetail"></div></dialog>
+
+  <dialog id="adminDialog" class="admin-dialog">
+    <button class="dialog-close" data-close="adminDialog" aria-label="বন্ধ করুন">×</button>
+    <div class="admin-heading"><div class="section-kicker">SECURE MANAGEMENT</div><h2>অ্যাডমিন প্যানেল</h2><p id="adminStatus">প্রশাসনিক অ্যাকাউন্ট দিয়ে লগইন করুন।</p></div>
+    <form id="loginForm" class="notice-form">
+      <label>অ্যাডমিন ইমেইল<input name="email" type="email" autocomplete="username" required placeholder="admin@example.com"></label>
+      <label>পাসওয়ার্ড<input name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="আপনার পাসওয়ার্ড"></label>
+      <button class="btn btn-primary form-submit" type="submit">নিরাপদে লগইন</button>
+    </form>
+    <div id="adminTools" hidden>
+      <div class="demo-warning">আপনি অ্যাডমিন হিসেবে লগইন করেছেন। নোটিশ প্রকাশ করলে তা অনলাইনে সবার জন্য দেখা যাবে।</div>
+      <button id="changePassword" class="btn btn-subtle" type="button">পাসওয়ার্ড পরিবর্তন</button>
+      <button id="changeEmail" class="btn btn-subtle" type="button">ইমেইল/ইউজারনেম পরিবর্তন</button>
+      <button id="logoutAdmin" class="btn btn-subtle" type="button">লগআউট</button>
+    <form id="noticeForm" class="notice-form">
+      <input type="hidden" name="editingId" value="">
+      <label>নোটিশের শিরোনাম<input name="title" required maxlength="140" placeholder="নোটিশের শিরোনাম লিখুন"></label>
+      <div class="form-row"><label>বিভাগ<select name="category" required><option value="সাধারণ">সাধারণ</option><option value="পরীক্ষা">পরীক্ষা ও রুটিন</option><option value="ছুটি">ছুটি ও বন্ধ</option><option value="জরুরি">জরুরি ঘোষণা</option></select></label><label>শ্রেণি<select name="className"><option>সকল শ্রেণি</option><option>ষষ্ঠ</option><option>সপ্তম</option><option>অষ্টম</option><option>নবম</option><option>দশম</option></select></label></div>
+      <div class="form-row"><label>প্রকাশের তারিখ<input name="date" type="date" required></label><label>মেয়াদ শেষ (ঐচ্ছিক)<input name="expires" type="date"></label></div>
+      <label>বিস্তারিত<textarea name="body" rows="5" required maxlength="5000" placeholder="নোটিশের বিস্তারিত লিখুন..."></textarea></label>
+      <label>PDF ফাইল (ঐচ্ছিক)<input name="pdf" type="file" accept="application/pdf"></label>
+      <label class="checkbox-label"><input name="important" type="checkbox"> এটিকে গুরুত্বপূর্ণ নোটিশ হিসেবে দেখান</label>
+      <div class="form-row"><button class="btn btn-primary form-submit" id="saveNoticeBtn" type="submit">নোটিশ প্রকাশ করুন</button><button class="btn btn-subtle" id="cancelEdit" type="button" hidden>এডিট বাতিল</button></div>
+    </form>
+    <div class="admin-list-heading"><h3>নোটিশ পরিচালনা</h3><span id="adminCount">০টি</span></div><div id="adminNoticeList" class="admin-notice-list"></div>
+    </div>
+  </dialog>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
