@@ -1,141 +1,20 @@
 <!doctype html>
-<html lang="bn">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#073b8a">
-  <meta name="description" content="ARUAIL BHS Smart Notice Board — স্কুলের সর্বশেষ নোটিশ, পরীক্ষা, রুটিন ও ছুটির ঘোষণা।">
-  <title>ARUAIL BHS | Smart Notice Board</title>
-  <link rel="icon" type="image/jpeg" href="assets/aruail-bhs-school-logo.jpg">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="top-strip">
-    <div class="container top-strip-inner">
-      <span>অরুয়াইল বহুমুখী উচ্চ বিদ্যালয়</span>
-      <span id="todayDate" aria-live="polite"></span>
-    </div>
-  </div>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171717"><meta name="description" content="MH Fashion — আধুনিক ফ্যাশন, সহজ অনলাইন অর্ডার।"><title>MH Fashion | Online Fashion Store</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><div class="announcement">MH Fashion-এ স্বাগতম · সহজ অর্ডার · ক্যাশ অন ডেলিভারি</div>
+<header class="header"><div class="wrap head-row"><a class="brand" id="brand" href="#home" aria-label="MH Fashion হোম; অ্যাডমিন প্যানেল খুলতে দ্রুত তিনবার ক্লিক করুন" title="MH Fashion — দ্রুত ৩ বার ক্লিক করলে অ্যাডমিন লগইন"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" role="img"><circle cx="32" cy="32" r="29" fill="#191919" stroke="#c9a16e" stroke-width="1.5"/><path d="M13 43V21h5l8 12 8-12h5v22h-6V31l-7 10-7-10v12z" fill="#f4e7d5"/><path d="M42 21h6v8h7v-8h6v22h-6v-9h-7v9h-6z" fill="#c9a16e" transform="translate(-2 0)"/></svg></span><span><b class="brand-name">MH FASHION</b><small class="brand-tagline">STYLE THAT SPEAKS</small></span></a><button class="mobile-menu" id="menuBtn" aria-label="মেনু">☰</button><nav id="nav"><a href="#home">হোম</a><a href="#shop">শপ</a><a href="#shop" data-category-link="নারী">নারী</a><a href="#shop" data-category-link="পুরুষ">পুরুষ</a><a href="#why">আমাদের সম্পর্কে</a></nav><div class="head-actions"><button id="searchToggle" class="icon-btn" aria-label="সার্চ">⌕</button><button id="cartOpen" class="cart-btn">ব্যাগ <span id="cartCount">০</span></button></div></div><div class="wrap search-row" id="searchRow" hidden><input id="searchInput" type="search" placeholder="পণ্যের নাম লিখে খুঁজুন..."><button id="searchClose">বন্ধ</button></div></header>
+<main id="home"><section class="hero wrap"><div class="hero-slider" id="heroSlider"><div class="slide-fallback"><div><span class="eyebrow">NEW COLLECTION · MH FASHION</span><h1>আপনার স্টাইল,<br><em>আপনার পরিচয়।</em></h1><p>প্রতিদিনের ফ্যাশনে নতুনত্ব আনুন। পছন্দের পোশাক অর্ডার করুন সহজেই।</p><a class="primary-btn" href="#shop">এখনই শপ করুন <span>↗</span></a></div></div><div class="slider-dots" id="sliderDots"></div><button class="slide-arrow prev" id="slidePrev" aria-label="আগের স্লাইড">‹</button><button class="slide-arrow next" id="slideNext" aria-label="পরের স্লাইড">›</button></div></section>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" id="brandLogo" href="#home" aria-label="ARUAIL BHS হোম; অ্যাডমিন প্যানেল খুলতে ডাবল-ক্লিক বা ডাবল-ট্যাপ করুন">
-        <img src="assets/aruail-bhs-school-logo.jpg" alt="অরুয়াইল বহুমুখী উচ্চ বিদ্যালয়ের লোগো">
-        <span class="brand-copy">
-          <strong>ARUAIL BHS</strong>
-          <small>SMART NOTICE BOARD</small>
-        </span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন" aria-expanded="false">☰</button>
-      <nav class="nav" id="mainNav">
-        <a class="active" href="#home">হোম</a>
-        <a href="#notices">সকল নোটিশ</a>
-        <a href="#categories">বিভাগ</a>
-        <a href="#about">স্কুল সম্পর্কে</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-glow"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="live-dot"></span> OFFICIAL DIGITAL NOTICE BOARD</div>
-          <h1>স্কুলের সকল নোটিশ,<br><span>এখন এক জায়গায়।</span></h1>
-          <p>পরীক্ষা, ক্লাস রুটিন, ছুটি ও জরুরি ঘোষণা—প্রয়োজনীয় তথ্য খুঁজুন সহজেই।</p>
-          <div class="hero-actions">
-            <a class="btn btn-light" href="#notices">সর্বশেষ নোটিশ দেখুন <span>↓</span></a>
-            <a class="btn btn-outline" href="#categories">বিভাগসমূহ</a>
-          </div>
-          <div class="hero-meta"><span>✓ সহজে ব্যবহারযোগ্য</span><span>✓ মোবাইল-ফ্রেন্ডলি</span><span>✓ দ্রুত নোটিশ খোঁজা</span></div>
-        </div>
-        <div class="hero-card">
-          <div class="hero-card-head"><div class="bell-icon">♧</div><div><b>Notice Updates</b><small>নোটিশ আপডেট</small></div><span class="status-pill">LIVE BOARD</span></div>
-          <div class="hero-card-main">
-            <div class="mini-stat"><span class="stat-icon blue">▤</span><div><small>মোট নোটিশ</small><strong id="heroTotal">০৬</strong></div></div>
-            <div class="mini-stat"><span class="stat-icon green">✦</span><div><small>গুরুত্বপূর্ণ</small><strong id="heroImportant">০২</strong></div></div>
-            <div class="mini-stat"><span class="stat-icon orange">◷</span><div><small>সর্বশেষ আপডেট</small><strong id="heroUpdated">আজ</strong></div></div>
-          </div>
-          <div class="hero-card-footer"><span class="pulse"></span> তথ্য জানতে নিয়মিত এই পেজটি দেখুন</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container quick-bar" aria-label="দ্রুত খোঁজ">
-      <div class="quick-title"><span class="search-symbol">⌕</span><div><b>নোটিশ খুঁজুন</b><small>শিরোনাম বা বিষয় লিখুন</small></div></div>
-      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="যেমন: পরীক্ষার রুটিন, ছুটি..." aria-label="নোটিশ খুঁজুন"><button id="clearSearch" type="button" aria-label="সার্চ মুছুন">×</button></label>
-      <select id="classFilter" aria-label="শ্রেণি অনুযায়ী ফিল্টার"><option value="">সব শ্রেণি</option><option>ষষ্ঠ</option><option>সপ্তম</option><option>অষ্টম</option><option>নবম</option><option>দশম</option><option>সকল শ্রেণি</option></select>
-    </section>
-
-    <section class="section container" id="notices">
-      <div class="section-heading">
-        <div><div class="section-kicker">NOTICE CENTER</div><h2>সর্বশেষ নোটিশ</h2><p>স্কুলের গুরুত্বপূর্ণ ঘোষণা ও আপডেট</p></div>
-        <div class="heading-actions"><span class="result-count" id="resultCount">৬টি নোটিশ</span><select id="sortSelect" aria-label="নোটিশ সাজান"><option value="newest">নতুন আগে</option><option value="oldest">পুরোনো আগে</option></select></div>
-      </div>
-      <div class="featured-notice" id="featuredNotice"></div>
-      <div class="notice-grid" id="noticeGrid"></div>
-      <div class="empty-state" id="emptyState" hidden><div>⌕</div><h3>কোনো নোটিশ পাওয়া যায়নি</h3><p>অন্য শব্দ দিয়ে খুঁজে দেখুন অথবা ফিল্টার পরিবর্তন করুন।</p><button class="btn btn-primary" id="resetFilters">সব নোটিশ দেখুন</button></div>
-    </section>
-
-    <section class="category-section" id="categories">
-      <div class="container">
-        <div class="section-heading">
-          <div><div class="section-kicker">BROWSE BY CATEGORY</div><h2>নোটিশের বিভাগ</h2><p>আপনার প্রয়োজন অনুযায়ী নোটিশ দেখুন</p></div>
-        </div>
-        <div class="category-grid">
-          <button class="category-card" data-category="পরীক্ষা"><span class="category-icon exam">▤</span><span><b>পরীক্ষা ও রুটিন</b><small>পরীক্ষার তারিখ, সময় ও নির্দেশনা</small></span><span class="category-arrow">↗</span></button>
-          <button class="category-card" data-category="ছুটি"><span class="category-icon holiday">☼</span><span><b>ছুটি ও বন্ধ</b><small>ছুটির তালিকা ও স্কুল বন্ধের খবর</small></span><span class="category-arrow">↗</span></button>
-          <button class="category-card" data-category="সাধারণ"><span class="category-icon general">▣</span><span><b>সাধারণ নোটিশ</b><small>স্কুলের সাধারণ ঘোষণা</small></span><span class="category-arrow">↗</span></button>
-          <button class="category-card" data-category="জরুরি"><span class="category-icon urgent">⚑</span><span><b>জরুরি ঘোষণা</b><small>গুরুত্বপূর্ণ ও জরুরি আপডেট</small></span><span class="category-arrow">↗</span></button>
-        </div>
-      </div>
-    </section>
-
-    <section class="school-band" id="about">
-      <div class="container school-band-inner">
-        <img src="assets/aruail-bhs-school-logo.jpg" alt="" loading="lazy">
-        <div><div class="section-kicker">ARUAIL BHS</div><h2>অরুয়াইল বহুমুখী উচ্চ বিদ্যালয়</h2><p>শিক্ষাই শক্তি, উন্নয়নের পথে। স্কুলের নোটিশ ও গুরুত্বপূর্ণ তথ্যের জন্য এই ডিজিটাল বোর্ডটি ব্যবহার করুন।</p><small>অরুয়াইল গ্রাম, সরাইল থানা, ব্রাহ্মণবাড়িয়া জেলা, বাংলাদেশ</small></div>
-        <a class="btn btn-primary" href="https://www.aruailbhs.edu.bd/" target="_blank" rel="noopener noreferrer">স্কুলের ওয়েবসাইট ↗</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner"><div class="footer-brand"><img src="assets/aruail-bhs-school-logo.jpg" alt=""><span><b>ARUAIL BHS</b><small>SMART NOTICE BOARD</small></span></div><p>সঠিক তথ্য, সহজে সবার কাছে।</p><span class="copyright">© <span id="year"></span> ARUAIL BHS</span></div>
-    <div class="container demo-note">শিক্ষার্থীদের জন্য তথ্য বোর্ড। প্রকাশের আগে বিদ্যালয় কর্তৃপক্ষের অনুমোদিত নোটিশ যাচাই করুন।</div>
-  </footer>
-
-  <dialog id="noticeDialog" class="notice-dialog"><button class="dialog-close" data-close="noticeDialog" aria-label="বন্ধ করুন">×</button><div id="noticeDetail"></div></dialog>
-
-  <dialog id="adminDialog" class="admin-dialog">
-    <button class="dialog-close" data-close="adminDialog" aria-label="বন্ধ করুন">×</button>
-    <div class="admin-heading"><div class="section-kicker">SECURE MANAGEMENT</div><h2>অ্যাডমিন প্যানেল</h2><p id="adminStatus">প্রশাসনিক অ্যাকাউন্ট দিয়ে লগইন করুন।</p></div>
-    <form id="loginForm" class="notice-form">
-      <label>অ্যাডমিন ইমেইল<input name="email" type="email" autocomplete="username" required placeholder="admin@example.com"></label>
-      <label>পাসওয়ার্ড<input name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="আপনার পাসওয়ার্ড"></label>
-      <button class="btn btn-primary form-submit" type="submit">নিরাপদে লগইন</button>
-    </form>
-    <div id="adminTools" hidden>
-      <div class="demo-warning">আপনি অ্যাডমিন হিসেবে লগইন করেছেন। নোটিশ প্রকাশ করলে তা অনলাইনে সবার জন্য দেখা যাবে।</div>
-      <button id="changePassword" class="btn btn-subtle" type="button">পাসওয়ার্ড পরিবর্তন</button>
-      <button id="logoutAdmin" class="btn btn-subtle" type="button">লগআউট</button>
-    <form id="noticeForm" class="notice-form">
-      <input type="hidden" name="editingId" value="">
-      <label>নোটিশের শিরোনাম<input name="title" required maxlength="140" placeholder="নোটিশের শিরোনাম লিখুন"></label>
-      <div class="form-row"><label>বিভাগ<select name="category" required><option value="সাধারণ">সাধারণ</option><option value="পরীক্ষা">পরীক্ষা ও রুটিন</option><option value="ছুটি">ছুটি ও বন্ধ</option><option value="জরুরি">জরুরি ঘোষণা</option></select></label><label>শ্রেণি<select name="className"><option>সকল শ্রেণি</option><option>ষষ্ঠ</option><option>সপ্তম</option><option>অষ্টম</option><option>নবম</option><option>দশম</option></select></label></div>
-      <div class="form-row"><label>প্রকাশের তারিখ<input name="date" type="date" required></label><label>মেয়াদ শেষ (ঐচ্ছিক)<input name="expires" type="date"></label></div>
-      <label>বিস্তারিত<textarea name="body" rows="5" required maxlength="5000" placeholder="নোটিশের বিস্তারিত লিখুন..."></textarea></label>
-      <label>নোটিশের ছবি (ঐচ্ছিক)<input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label><small class="upload-help">JPG, PNG বা WebP ছবি; সর্বোচ্চ ৫ MB। ছবিটি নোটিশের সঙ্গে সবার জন্য দেখা যাবে।</small>
-      <label>PDF ফাইল (ঐচ্ছিক)<input name="pdf" type="file" accept="application/pdf"></label>
-      <label class="checkbox-label"><input name="important" type="checkbox"> এটিকে গুরুত্বপূর্ণ নোটিশ হিসেবে দেখান</label>
-      <div class="form-row"><button class="btn btn-primary form-submit" id="saveNoticeBtn" type="submit">নোটিশ প্রকাশ করুন</button><button class="btn btn-subtle" id="cancelEdit" type="button" hidden>এডিট বাতিল</button></div>
-    </form>
-    <div class="admin-list-heading"><h3>নোটিশ পরিচালনা</h3><span id="adminCount">০টি</span></div><div id="adminNoticeList" class="admin-notice-list"></div>
-    </div>
-  </dialog>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="config.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+<section class="shop-section wrap" id="shop"><div class="section-top"><div><span class="eyebrow">CURATED FOR YOU</span><h2>নতুন কালেকশন</h2><p>আপনার পছন্দের স্টাইলটি বেছে নিন</p></div><div class="shop-controls"><select id="categoryFilter"><option value="">সব ক্যাটাগরি</option><option>নারী</option><option>পুরুষ</option><option>টি-শার্ট</option><option>শার্ট</option><option>প্যান্ট</option><option>অন্যান্য</option></select><select id="sortFilter"><option value="newest">নতুন পণ্য</option><option value="price-low">দাম: কম থেকে বেশি</option><option value="price-high">দাম: বেশি থেকে কম</option></select></div></div><div id="productGrid" class="product-grid"><div class="loading">পণ্য লোড হচ্ছে...</div></div><div id="emptyProducts" class="empty" hidden>এখনো কোনো পণ্য যোগ করা হয়নি। শিগগিরই নতুন কালেকশন আসছে।</div></section>
+<section class="editorial" id="why"><div class="wrap editorial-inner"><div><span class="eyebrow">THE MH FASHION EXPERIENCE</span><h2>সিম্পল। স্মার্ট।<br><em>আপনার নিজস্ব স্টাইল।</em></h2><p>আপনার দৈনন্দিন ও বিশেষ মুহূর্তের জন্য বেছে নেওয়া ফ্যাশন কালেকশন। পণ্য পছন্দ করুন, অর্ডার দিন—বাকি আপডেট আমরা জানাব।</p></div><div class="editorial-stamp">MH<br><small>FASHION</small></div></div></section></main>
+<section class="benefits wrap"><div><b>✓</b><span><strong>সহজ অর্ডার</strong><small>কয়েক ধাপেই অর্ডার</small></span></div><div><b>↗</b><span><strong>ক্যাশ অন ডেলিভারি</strong><small>পণ্য পেয়ে পেমেন্ট</small></span></div><div><b>◇</b><span><strong>নির্বাচিত কালেকশন</strong><small>স্টাইলিশ ও মানসম্মত</small></span></div><div><b>♡</b><span><strong>কাস্টমার সাপোর্ট</strong><small>সহায়তা পেতে যোগাযোগ</small></span></div></section>
+<footer class="footer"><div class="wrap footer-grid"><div class="footer-brand-column"><a class="brand footer-brand" id="footerBrand" href="#home"><span class="brand-mark" aria-hidden="true"></span><span><b class="brand-name">MH FASHION</b><small class="brand-tagline">STYLE THAT SPEAKS</small></span></a><p class="footer-copyright-note" id="footerCopyright">© MH Fashion. All rights reserved.</p></div><div><h3>কাস্টমার সার্ভিস</h3><p>অর্ডার বা পণ্য সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।</p><div id="contactInfo">যোগাযোগের তথ্য অ্যাডমিন প্যানেল থেকে যোগ করুন।</div><div class="social-links" id="socialLinks"></div></div><div><h3>গুরুত্বপূর্ণ</h3><a href="#shop">সকল পণ্য</a><a href="#why">আমাদের সম্পর্কে</a></div></div></footer>
+<div class="overlay" id="overlay"></div><aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><h2>আপনার শপিং ব্যাগ</h2><button class="close" data-close="cart">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-bottom"><div class="total-line"><span>সর্বমোট</span><strong id="cartTotal">৳০</strong></div><button class="primary-btn full" id="checkoutBtn">অর্ডার সম্পন্ন করুন</button><small>ডেলিভারি চার্জ অর্ডার কনফার্মের সময় জানানো হবে।</small></div></aside>
+<dialog id="productDialog" class="modal product-modal"><button class="modal-x" data-close="product">×</button><div id="productDetail"></div></dialog>
+<dialog id="checkoutDialog" class="modal checkout-modal"><button class="modal-x" data-close="checkout">×</button><div class="modal-heading"><span class="eyebrow">CHECKOUT</span><h2>অর্ডার সম্পন্ন করুন</h2><p>সঠিক তথ্য দিয়ে ফর্মটি পূরণ করুন।</p></div><form id="checkoutForm" class="form"><div class="form-row"><label>আপনার নাম *<input name="name" required maxlength="100" placeholder="সম্পূর্ণ নাম"></label><label>মোবাইল নম্বর *<input name="phone" type="tel" required pattern="[0-9+\- ]{10,16}" placeholder="01XXXXXXXXX"></label></div><label>সম্পূর্ণ ডেলিভারি ঠিকানা *<textarea name="address" required rows="3" maxlength="500" placeholder="বাড়ি/রোড, এলাকা, উপজেলা, জেলা"></textarea></label><label>অতিরিক্ত নির্দেশনা (ঐচ্ছিক)<textarea name="note" rows="2" maxlength="500" placeholder="সাইজ/রঙ বা ডেলিভারি সংক্রান্ত তথ্য"></textarea></label><div class="payment-choice"><b>পেমেন্ট পদ্ধতি</b><label><input type="radio" checked disabled> ক্যাশ অন ডেলিভারি (পণ্য হাতে পেয়ে পেমেন্ট)</label></div><div id="checkoutSummary" class="checkout-summary"></div><button class="primary-btn full" type="submit" id="placeOrder">অর্ডার কনফার্ম করুন</button><small class="form-hint">অর্ডার জমা দেওয়ার পর স্টোর থেকে ফোনে যোগাযোগ করা হতে পারে।</small></form></dialog>
+<dialog id="successDialog" class="modal success-modal"><div class="success-icon">✓</div><h2>অর্ডার গ্রহণ করা হয়েছে!</h2><p id="successText">আপনার অর্ডার নম্বর:</p><button class="primary-btn" data-close="success">ঠিক আছে</button></dialog>
+<dialog id="adminDialog" class="modal admin-modal"><button class="modal-x" data-close="admin">×</button><div class="modal-heading"><span class="eyebrow">SECURE STORE MANAGEMENT</span><h2>অ্যাডমিন প্যানেল</h2><p id="adminStatus">অ্যাডমিন অ্যাকাউন্ট দিয়ে লগইন করুন।</p></div><form id="loginForm" class="form"><label>ইমেইল<input name="email" type="email" required autocomplete="username"></label><label>পাসওয়ার্ড<input name="password" type="password" required autocomplete="current-password"></label><button class="primary-btn full">লগইন</button></form><section id="adminArea" hidden><div class="admin-tabs"><button class="selected" data-tab="products">পণ্য</button><button data-tab="slides">ব্যানার স্লাইডার</button><button data-tab="orders">অর্ডার</button><button data-tab="settings">স্টোর তথ্য</button></div>
+<div class="admin-panel" data-panel="products"><h3 id="productFormTitle">নতুন পণ্য যোগ করুন</h3><form id="productForm" class="form"><input type="hidden" name="id"><label>পণ্যের নাম *<input name="name" required maxlength="140"></label><div class="form-row"><label>মূল্য (৳) *<input name="price" type="number" min="1" required></label><label>আগের মূল্য (৳)<input name="old_price" type="number" min="0"></label></div><div class="form-row"><label>ক্যাটাগরি<select name="category"><option>নারী</option><option>পুরুষ</option><option>টি-শার্ট</option><option>শার্ট</option><option>প্যান্ট</option><option>অন্যান্য</option></select></label><label>স্টক সংখ্যা<input name="stock" type="number" min="0" value="10"></label></div><label>সাইজের ধরন<select name="size_type" id="sizeType"><option value="none">সাইজ লাগবে না</option><option value="apparel">পোশাকের সাইজ (S, M, L, XL)</option><option value="pants">প্যান্টের সাইজ (কোমর ও লম্বা — ইঞ্চি)</option><option value="custom">কাস্টম সাইজ</option></select></label><label id="sizeOptionsWrap">যে সাইজগুলো আছে (কমা দিয়ে লিখুন)<input name="size_options_text" placeholder="S, M, L, XL, XXL"><small class="field-help">শুধু আপনার কাছে যে সাইজগুলো আছে সেগুলো লিখুন। প্যান্টের ক্ষেত্রে কোমরের মাপ ইঞ্চিতে লিখুন: ২৮, ৩০, ৩২, ৩৪</small></label><label id="lengthOptionsWrap" hidden>প্যান্টের লম্বা / ইনসিম (ইঞ্চি)<input name="length_options_text" placeholder="৩০, ৩২, ৩৪"><small class="field-help">প্যান্টের লম্বার যে অপশনগুলো আছে সেগুলো কমা দিয়ে লিখুন।</small></label><label>সাইজ সংক্রান্ত নোট (ঐচ্ছিক)<input name="size_note" maxlength="180" placeholder="যেমন: মাপ ইঞ্চিতে দেওয়া হয়েছে"></label><label>বিবরণ<textarea name="description" rows="3" maxlength="2000"></textarea></label><label>পণ্যের ছবি *<input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label><label class="check"><input name="active" type="checkbox" checked> ওয়েবসাইটে দেখান</label><div class="form-row"><button class="primary-btn">পণ্য সংরক্ষণ</button><button type="button" id="cancelProductEdit" class="secondary-btn">ফর্ম রিসেট</button></div></form><div class="admin-list" id="adminProducts"></div></div>
+<div class="admin-panel" data-panel="slides" hidden><h3>হিরো ব্যানার স্লাইডার</h3><p class="muted">একাধিক ছবি যোগ করুন। একটি ছবি থাকলে স্থির থাকবে, একাধিক হলে স্বয়ংক্রিয়ভাবে পরিবর্তন হবে।</p><form id="slideForm" class="form"><input type="hidden" name="id"><label>স্লাইডের শিরোনাম<input name="title" maxlength="120" placeholder="নতুন কালেকশন"></label><label>ছোট বিবরণ<input name="subtitle" maxlength="220" placeholder="আপনার পছন্দের স্টাইল"></label><label>ব্যানার ছবি *<input name="image" type="file" accept="image/jpeg,image/png,image/webp"></label><label class="check"><input name="active" type="checkbox" checked> স্লাইডটি প্রকাশ করুন</label><button class="primary-btn">স্লাইড যোগ / আপডেট</button></form><div class="admin-list" id="adminSlides"></div></div>
+<div class="admin-panel" data-panel="orders" hidden><div class="list-heading"><h3>কাস্টমার অর্ডার</h3><button id="refreshOrders" class="secondary-btn">রিফ্রেশ</button></div><div id="adminOrders" class="admin-list"></div></div>
+<div class="admin-panel" data-panel="settings" hidden><h3>স্টোর পরিচিতি ও যোগাযোগ</h3><p class="muted">এখান থেকে ওয়েবসাইটের নাম, লোগো, কপিরাইট ও সোশ্যাল মিডিয়া লিংক যেকোনো সময় পরিবর্তন করতে পারবেন।</p><form id="settingsForm" class="form"><div class="form-row"><label>স্টোরের নাম<input name="store_name" maxlength="60" placeholder="MH Fashion" required></label><label>লোগোর নিচের ছোট লেখা<input name="tagline" maxlength="80" placeholder="STYLE THAT SPEAKS"></label></div><label>নতুন লোগো ছবি (ঐচ্ছিক)<input name="logo" type="file" accept="image/png,image/jpeg,image/webp"><small class="field-help">PNG/WebP স্বচ্ছ ব্যাকগ্রাউন্ডের লোগো ভালো দেখাবে। ছবি না দিলে বর্তমান লোগো অপরিবর্তিত থাকবে।</small></label><label>কপিরাইট / নিচের লেখা<input name="copyright" maxlength="180" placeholder="© MH Fashion. All rights reserved."></label><div class="form-row"><label>যোগাযোগ নম্বর<input name="phone" type="tel" placeholder="01XXXXXXXXX"></label><label>যোগাযোগ ইমেইল<input name="contact_email" type="email" placeholder="hello@example.com"></label></div><label>WhatsApp লিংক<input name="whatsapp" type="url" placeholder="https://wa.me/8801XXXXXXXXX"></label><label>Telegram লিংক<input name="telegram" type="url" placeholder="https://t.me/yourusername"></label><label>Facebook পেজ লিংক<input name="facebook" type="url" placeholder="https://facebook.com/yourpage"></label><label>ডেলিভারি চার্জ (৳)<input name="delivery" type="number" min="0" value="0"></label><button class="primary-btn">সব পরিবর্তন সংরক্ষণ করুন</button></form></div><div class="admin-bottom"><button id="logoutBtn" class="secondary-btn">লগআউট</button></div></section></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="script.js"></script></body></html>
